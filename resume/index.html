@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <section class="first_screen">
+        <div class="container">
+            <header>
+                <nav>
+                    <ul class="flex_nav align headerr">
+                        <li><a href="">Home</a></li>
+                        <li><a href="" id="about" class="button_contactt">About me</a></li>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var buttonContact = document.querySelector('.button_contactt');
+                                buttonContact.addEventListener('click', scrollToBottom);
+
+                                function scrollToBottom(event) {
+                                    event.preventDefault();
+
+                                    const scrollHeight = document.documentElement.scrollHeight;
+                                    const clientHeight = document.documentElement.clientHeight;
+                                    const maxScrollTop = scrollHeight - clientHeight;
+                                    const scrollStep = Math.max(20, Math.floor(maxScrollTop / 80)); // Швидкість прокрутки
+
+                                    function scroll() {
+                                        if (document.documentElement.scrollTop < maxScrollTop) {
+                                            document.documentElement.scrollTop += scrollStep;
+                                            requestAnimationFrame(scroll);
+                                        }
+                                    }
+
+                                    scroll();
+                                }
+                            });
+                        </script>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><button class="project_bt">Project</button></li>
+                        <li><a href="./ukr.html" class="lenguage">UKR</a></li>
+                        
+                    </ul>
+                    
+                </nav>
+                <a href="" class="burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+            </header>
+            <div class="flex infome">
+                <div class="block">
+                    <h3>FRONT-EDN Designer</h3>
+                    <h1>Hello, my name is Nikita Kreniov</h1>
+                    <p>
+                        This portfolio was created in 3 hours which in my opinion is fast for my age. More accurate
+                        information about me and my contact details will be below. It is recommended to familiarize
+                        yourself with the projects that will be shown on this portfolio</p>
+                    <div class="two_button">
+                        <a href="" class="button_project align">Projects</a>
+                        <a href="" class="button_contact align">About me</a>
+                        <a href="" class="scroll-to-top"></a>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var buttonContact = document.querySelector('.button_contact');
+                                buttonContact.addEventListener('click', scrollToBottom);
+
+                                function scrollToBottom(event) {
+                                    event.preventDefault();
+
+                                    const scrollHeight = document.documentElement.scrollHeight;
+                                    const clientHeight = document.documentElement.clientHeight;
+                                    const maxScrollTop = scrollHeight - clientHeight;
+                                    const scrollStep = Math.max(20, Math.floor(maxScrollTop / 80)); // Швидкість прокрутки
+
+                                    function scroll() {
+                                        if (document.documentElement.scrollTop < maxScrollTop) {
+                                            document.documentElement.scrollTop += scrollStep;
+                                            requestAnimationFrame(scroll);
+                                        }
+                                    }
+
+                                    scroll();
+                                }
+                            });
+                        </script>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="two_screen">
+        <script>
+            window.onload = function() {
+                var projectButtons = document.getElementsByClassName("project_bt");
+                for (var i = 0; i < projectButtons.length; i++) {
+                    projectButtons[i].addEventListener("click", scrollToSection);
+                }
+    
+                function scrollToSection() {
+                    var section = document.getElementsByClassName("two_screen")[0];
+                    section.scrollIntoView({ behavior: "smooth" });
+                }
+            };
+        </script>
+        <div class="container">
+            <div class="projects">
+                <h2 class="pr">Projects</h2>
+                <div class="project1 flex">
+                    <div class="info_proj">
+                        <h2>ZIMU BLOG</h2>
+                        <p>I created this personal project in order to show how to create an interface in Figma using a
+                            portfolio as an example.</p>
+                        <a href="https://647767916b8d2d3d6ba8e450--sweet-paprenjak-10e95d.netlify.app/"
+                            target="_blank">View Project</a>
+                    </div>
+                    <img src="./img/zimu.png" alt="" class="right_bord">
+                </div>
+                <div class="project2 flex">
+                    <img src="./img/travel.png" alt="" class="left_bord">
+                    <div class="info_proj">
+                        <h2>Travel</h2>
+                        <p>I created this personal project in order to show how to create an interface in Figma using a
+                            portfolio as an example.</p>
+                        <a href="https://64737843acca054dea884711--sweet-paprenjak-10e95d.netlify.app/"
+                            target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="project3 flex">
+                    <div class="info_proj">
+                        <h2>Cozy House</h2>
+                        <p>I created this personal project in order to show how to create an interface in Figma using a
+                            portfolio as an example.</p>
+                        <a href="https://647765c37d729b362cc81a5d--sweet-paprenjak-10e95d.netlify.app/"
+                            target="_blank">View Project</a>
+                    </div>
+                    <img src="./img/dog.png" alt="" class="right_bord">
+                </div>
+            </div>
+            <section class="about_me" id="about">
+                <h2 class="info_for_me">About me</h2>
+                <div class="flex">
+                    <div class="block_and_end">
+                        <h2 class="info_me">About me</h2>
+                        <p class="text_info_for_me">I am 14 years old, young, promising, ready to work for free (for the
+                            first time) in any company. This portfolio was built based on a mockup with Figma, which
+                            means I can also build sites and create mockups on that platform. If you have read up to
+                            this point, it means that I am interested in you, so I recommend that you take my contact
+                            details, all you have to do is go to the very top and look carefully at the top of the site)
+                        </p>
+                        <a href="" class="RESUm">Resume</a>
+                    </div>
+                    <div class="circle-container">
+                        <img src="./img/cap.jpg" alt="Опис фото">
+                    </div>
+                </div>
+            </section>
+            <div class="sot-seti">
+                <div class="flex align">
+                    <a href="https://www.instagram.com/nikita_krn_/" target="_blank">
+                        <img src="./img/inst.png" alt="">
+                    </a>
+                    <img src="./img/Vector.png" alt="">
+                    <img src="./img/twitch.png" alt="">
+                </div>
+                <p>Nikita Kreniov 2023 </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="style.js"></script>
+</body>
+
+</html>
